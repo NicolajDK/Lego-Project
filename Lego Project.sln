@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lego Project", "Lego Project\Lego Project.csproj", "{5674BE6E-FCDC-432E-9D56-1686B23EBA3B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5674BE6E-FCDC-432E-9D56-1686B23EBA3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5674BE6E-FCDC-432E-9D56-1686B23EBA3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5674BE6E-FCDC-432E-9D56-1686B23EBA3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5674BE6E-FCDC-432E-9D56-1686B23EBA3B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
