@@ -1,0 +1,22 @@
+﻿@using Lego_Project_Core.Models
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<Lego_Project_Core.Models.News>
+
+@{
+	Layout = "Layout.cshtml";
+
+    var news = Model.Content.Children<NewsArticle>();
+}
+
+<div class="news-list">
+    <ul>
+        @foreach (var article in news)
+        {
+            <li>
+                <a href="@article.Url">
+                    <p>@article.Headline</p>
+                    <p>@article.Teaser</p>
+                </a>
+            </li>
+        }
+    </ul>
+</div>

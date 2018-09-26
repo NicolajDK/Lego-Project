@@ -1,0 +1,18 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = null;
+}
+<html>
+    <header>
+        <link rel="stylesheet" href="@Url.Content("~/css/bootstrap.css")" />
+    </header>
+    <body>
+    @Html.Partial("Menu/Navigation Menu")
+    <div class="container">
+        @RenderBody()
+    </div>
+    
+    </body>
+</html>
+
+
