@@ -403,6 +403,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Plugins\MarkDownEditor\lib\docs.css" />
+    <Content Include="App_Plugins\MarkDownEditor\lib\Markdown.Converter.js" />
+    <Content Include="App_Plugins\MarkDownEditor\lib\Markdown.Editor.Icons.fw.png" />
+    <Content Include="App_Plugins\MarkDownEditor\lib\Markdown.Editor.Icons.png" />
+    <Content Include="App_Plugins\MarkDownEditor\lib\Markdown.Editor.js" />
+    <Content Include="App_Plugins\MarkDownEditor\lib\Markdown.Sanitizer.js" />
+    <Content Include="App_Plugins\MarkDownEditor\markdowneditor.html" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.controller.js" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.htm" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.resource.js" />
@@ -594,6 +601,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="css\bootstrap.css" />
+    <Content Include="css\master.css" />
     <Content Include="default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Content\Site.css" />
@@ -662,6 +670,9 @@
     <Content Include="config\BackOfficeTours\getting-started.json" />
     <Content Include="config\applications.config" />
     <Content Include="config\404handlers.config" />
+    <Content Include="App_Plugins\MarkDownEditor\package.manifest" />
+    <Content Include="App_Plugins\MarkDownEditor\markdowneditor.controller.js" />
+    <Content Include="App_Plugins\MarkDownEditor\lib\Markdown.Editor.less" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -2270,12 +2281,19 @@
     <Content Include="Views\Partials\Grid\Bootstrap2.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap2-Fluid.cshtml" />
     <Content Include="Views\Partials\Spot\News Spot.cshtml" />
+    <Content Include="Views\Review.cshtml" />
+    <Content Include="Views\Reviews.cshtml" />
+    <Content Include="Views\Gallery.cshtml" />
+    <Content Include="Views\LegoSet.cshtml" />
+    <Content Include="Views\LegoSets.cshtml" />
+    <Content Include="Views\MacroPartials\Gallery Macro.cshtml" />
+    <Content Include="Views\MacroPartials\News Gallery.cshtml" />
+    <Content Include="Views\MacroPartials\News Spot View.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="Views\MacroPartials\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -2301,6 +2319,7 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
+  <PropertyGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />

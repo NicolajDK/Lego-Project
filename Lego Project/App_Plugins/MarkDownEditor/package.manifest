@@ -1,0 +1,35 @@
+﻿{
+  "propertyEditors": [
+    {
+      "alias": "My.MarkDownEditor",
+      "name": "My Markdown Editor",
+      "icon": "icon-code",
+      "group": "Rich Content",
+      "editor": {
+        "view": "~/App_Plugins/MarkDownEditor/markdowneditor.html"
+      },
+      "prevalues": {
+        "fields": [
+          {
+            "label": "Preview",
+            "description": "Display a live preview",
+            "key": "preview",
+            "view": "boolean"
+          },
+          {
+            "label": "Default value",
+            "description": "If value is blank, the editor will show this",
+            "key": "defaultValue",
+            "view":  "textarea" 
+          }
+        ]
+      }
+
+    }
+  ],
+  "javascript": [
+    '~/App_Plugins/MarkDownEditor/markdowneditor.controller.js'
+  ]
+
+}
+

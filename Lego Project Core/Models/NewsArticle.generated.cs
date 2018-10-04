@@ -55,6 +55,15 @@ namespace Lego_Project_Core.Models
 		}
 
 		///<summary>
+		/// Article Image: Image shown in header and spot
+		///</summary>
+		[ImplementPropertyType("articleImage")]
+		public IPublishedContent ArticleImage
+		{
+			get { return this.GetPropertyValue<IPublishedContent>("articleImage"); }
+		}
+
+		///<summary>
 		/// Headline: Headline for the article
 		///</summary>
 		[ImplementPropertyType("headline")]

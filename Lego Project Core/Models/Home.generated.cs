@@ -62,5 +62,14 @@ namespace Lego_Project_Core.Models
 		{
 			get { return this.GetPropertyValue<string>("headline"); }
 		}
+
+		///<summary>
+		/// Markdown
+		///</summary>
+		[ImplementPropertyType("markdown")]
+		public object Markdown
+		{
+			get { return this.GetPropertyValue("markdown"); }
+		}
 	}
 }

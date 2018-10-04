@@ -58,6 +58,12 @@
   <ItemGroup>
     <Compile Include="Models\Builder.cs">
       <Generator>UmbracoModelsBuilder</Generator>
+      <LastGenOutput>Builder.generated.cs</LastGenOutput>
+    </Compile>
+    <Compile Include="Models\Builder.generated.cs">
+      <DependentUpon>Builder.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Models\File.generated.cs">
       <DependentUpon>Builder.cs</DependentUpon>
@@ -65,10 +71,19 @@
     <Compile Include="Models\Folder.generated.cs">
       <DependentUpon>Builder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Gallery.generated.cs">
+      <DependentUpon>Builder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Home.generated.cs">
       <DependentUpon>Builder.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Image.generated.cs">
+      <DependentUpon>Builder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LegoSet.generated.cs">
+      <DependentUpon>Builder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LegoSets.generated.cs">
       <DependentUpon>Builder.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Member.generated.cs">
@@ -78,6 +93,12 @@
       <DependentUpon>Builder.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\NewsArticle.generated.cs">
+      <DependentUpon>Builder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Review.generated.cs">
+      <DependentUpon>Builder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reviews.generated.cs">
       <DependentUpon>Builder.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

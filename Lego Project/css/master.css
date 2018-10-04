@@ -1,0 +1,18 @@
+﻿body {
+}
+
+.news-spot-article{
+    padding-left: 5px;
+    height: 150px;
+    background-size: cover;
+    margin-right: 50px;
+}
+
+.news-spot-article p, a{
+    color: white;
+    font-size: large;
+}
+
+.news-spot-article a{
+
+}

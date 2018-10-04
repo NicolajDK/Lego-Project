@@ -1,0 +1,37 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@using Lego_Project_Core.Models;
+@using Umbraco.Web.Models
+
+@{
+
+
+    var param = Model.MacroParameters["newsSpots"].ToString();
+    var ids = param.Split(',');
+    List<NewsArticle> Articles = new List<NewsArticle>();
+    foreach (var id in ids)
+    {
+        var item = Umbraco.TypedContent(Int32.Parse(id));
+
+        Articles.Add(item.OfType<NewsArticle>());
+    }
+
+    var myParams = Model.GetParameterValue<List<NewsArticle>>("newsSpots");
+}
+
+<div class="news-spots">
+    <div class="news-spot-list ">
+        <div class="row">
+            <div class="col-1" style="margin-right: 30px;"></div>
+            @foreach (var newsArticle in Articles)
+            {
+                <div class="news-spot-article col-3" style="background-image: url('@newsArticle.ArticleImage.Url');">
+                    <p>@newsArticle.Headline</p>
+                    <p>@newsArticle.Teaser</p>
+                    <a href="@newsArticle.Url" class="btn btn-info">Read More</a>
+                </div>
+
+            }
+            <div class="col-1"></div>
+        </div>
+    </div>
+</div>
