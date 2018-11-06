@@ -6,13 +6,22 @@
     <header>
         <link rel="stylesheet" href="@Url.Content("~/css/bootstrap.css")" />
         <link rel="stylesheet" href="@Url.Content("~/css/master.css")"/>
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <script type="text/javascript" src="~/Scripts/bootstrap.js"></script>
+
+        <script type="text/javascript" src="~/Scripts/master.js"></script>
+        
     </header>
     <body>
     @Html.Partial("Menu/Navigation Menu")
     <div class="container">
         @RenderBody()
     </div>
-    
+    <div>
+        @Html.Partial("General/Footer")
+    </div>
     </body>
 </html>
 

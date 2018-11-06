@@ -22,7 +22,7 @@ namespace Lego_Project_Core.Models
 {
 	/// <summary>Lego Sets</summary>
 	[PublishedContentModel("legoSets")]
-	public partial class LegoSets : PublishedContentModel
+	public partial class LegoSets : PublishedContentModel, IBaseContent
 	{
 #pragma warning disable 0109 // new is redundant
 		public new const string ModelTypeAlias = "legoSets";
@@ -43,6 +43,24 @@ namespace Lego_Project_Core.Models
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<LegoSets, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Main Content: Main content for the page
+		///</summary>
+		[ImplementPropertyType("mainContent")]
+		public IHtmlString MainContent
+		{
+			get { return Lego_Project_Core.Models.BaseContent.GetMainContent(this); }
+		}
+
+		///<summary>
+		/// Title: Enter the title
+		///</summary>
+		[ImplementPropertyType("title")]
+		public string Title
+		{
+			get { return Lego_Project_Core.Models.BaseContent.GetTitle(this); }
 		}
 	}
 }

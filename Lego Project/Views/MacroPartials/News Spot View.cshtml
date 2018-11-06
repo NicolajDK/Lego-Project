@@ -21,13 +21,14 @@
 <div class="news-spots">
     <div class="news-spot-list ">
         <div class="row">
-            <div class="col-1" style="margin-right: 30px;"></div>
+            <div class="col-1" style="margin-right: 10px;"></div>
             @foreach (var newsArticle in Articles)
             {
-                <div class="news-spot-article col-3" style="background-image: url('@newsArticle.ArticleImage.Url');">
+                <div class="news-spot-article col-3">
+                    <img class="thumbnail" src="@newsArticle.ArticleImage.Url"/>
                     <p>@newsArticle.Headline</p>
                     <p>@newsArticle.Teaser</p>
-                    <a href="@newsArticle.Url" class="btn btn-info">Read More</a>
+                    <a href="@newsArticle.Url" class="btn btn-info" style="margin-bottom:2px">Read More</a>
                 </div>
 
             }

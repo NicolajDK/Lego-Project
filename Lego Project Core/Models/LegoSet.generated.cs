@@ -46,12 +46,39 @@ namespace Lego_Project_Core.Models
 		}
 
 		///<summary>
+		/// Set Height: Height of the set in cm
+		///</summary>
+		[ImplementPropertyType("height")]
+		public int Height
+		{
+			get { return this.GetPropertyValue<int>("height"); }
+		}
+
+		///<summary>
 		/// Image
 		///</summary>
 		[ImplementPropertyType("image")]
 		public IPublishedContent Image
 		{
 			get { return this.GetPropertyValue<IPublishedContent>("image"); }
+		}
+
+		///<summary>
+		/// Number of Bricks: Enter the number of bricks for the set
+		///</summary>
+		[ImplementPropertyType("numberOfBricks")]
+		public int NumberOfBricks
+		{
+			get { return this.GetPropertyValue<int>("numberOfBricks"); }
+		}
+
+		///<summary>
+		/// Set Release Date: Date for the release of the set
+		///</summary>
+		[ImplementPropertyType("releaseDate")]
+		public DateTime ReleaseDate
+		{
+			get { return this.GetPropertyValue<DateTime>("releaseDate"); }
 		}
 
 		///<summary>
@@ -73,12 +100,30 @@ namespace Lego_Project_Core.Models
 		}
 
 		///<summary>
+		/// Set Gallery: Select the pictures for the gallery
+		///</summary>
+		[ImplementPropertyType("setGallery")]
+		public IEnumerable<IPublishedContent> SetGallery
+		{
+			get { return this.GetPropertyValue<IEnumerable<IPublishedContent>>("setGallery"); }
+		}
+
+		///<summary>
 		/// Set Title: Title of a lego set
 		///</summary>
 		[ImplementPropertyType("setTitle")]
 		public string SetTitle
 		{
 			get { return this.GetPropertyValue<string>("setTitle"); }
+		}
+
+		///<summary>
+		/// Set Width: Width of the set in cm
+		///</summary>
+		[ImplementPropertyType("setWidth")]
+		public int SetWidth
+		{
+			get { return this.GetPropertyValue<int>("setWidth"); }
 		}
 	}
 }

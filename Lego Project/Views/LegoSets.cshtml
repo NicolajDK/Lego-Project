@@ -1,5 +1,37 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.LegoSets>
-@using ContentModels = Umbraco.Web.PublishedContentModels;
+﻿@using Lego_Project_Core.Models
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<Lego_Project_Core.Models.LegoSets>
+
 @{
-	Layout = null;
+    Layout = "Layout.cshtml";
+
+    var sets = Model.Content.Children<LegoSet>();
 }
+
+<div class="lego-sets-page">
+    <div class="set-page-info">
+        <div class="title">
+            <h1>@Model.Content.Title</h1>
+        </div>
+        <div>
+            @Model.Content.MainContent
+        </div>
+    </div>
+
+    <div class="lego-set-list row">
+        @foreach (var set in sets)
+        {
+            <div class="col-3 ">
+                <div class="set-item">
+                    <a href="@set.Url" class="thumbnail">
+                        <img src="@set.Image.Url"/>
+                    </a>
+                    <div class="set-item-details">
+                        <p>@set.SetTitle</p>
+                        <p>@set.SetCode</p>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>

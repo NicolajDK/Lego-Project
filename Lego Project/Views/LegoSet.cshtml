@@ -1,5 +1,66 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.LegoSet>
-@using ContentModels = Umbraco.Web.PublishedContentModels;
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<Lego_Project_Core.Models.LegoSet>
+
 @{
-	Layout = null;
+	Layout = "Layout.cshtml";
 }
+
+<div class="lego-set-Page">
+    <div class="row">
+        <div class="col-8">
+            <div class="set-hero-banner -full-width" style="background-image: url('@Model.Content.Image.Url')">
+
+            </div>
+        </div>
+        <div class="col-4">
+            <ul class="list-group">
+                <li class="list-group-item">Title: @Model.Content.SetTitle</li>
+                <li class="list-group-item">Code: @Model.Content.SetCode</li>
+                <li class="list-group-item">Number of Bricks: @Model.Content.NumberOfBricks</li>
+                <li class="list-group-item">Release Date: @Model.Content.ReleaseDate</li>
+                <li class="list-group-item">Height (cm): @Model.Content.Height</li>
+                <li class="list-group-item">Width (cm): @Model.Content.SetWidth</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="set-details jumbotron">
+        <h2>
+            Description
+        </h2>
+        <div>
+            @Model.Content.SetDescription
+        </div>
+    </div>
+    <div class="divider">
+
+    </div>
+    <div class="set-gallery">
+        <h2>Gallery</h2>
+        <div class="row">
+            @foreach (var image in Model.Content.SetGallery)
+            {
+                <a href="#" class="col-3 thumbnail pop" style="background-image: url('@image.Url')" data-url="@image.Url">
+
+                </a>
+            }
+        </div>
+    </div>
+</div>
+
+<!-- Creates the bootstrap modal where the image will appear -->
+<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Image preview</h4>
+            </div>
+            <div class="modal-body">
+                <img src="" id="imagepreview" style="width: 400px; height: 264px;" >
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

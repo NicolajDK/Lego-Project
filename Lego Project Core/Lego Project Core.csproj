@@ -56,6 +56,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\BaseContent.generated.cs">
+      <DependentUpon>Builder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Builder.cs">
       <Generator>UmbracoModelsBuilder</Generator>
       <LastGenOutput>Builder.generated.cs</LastGenOutput>

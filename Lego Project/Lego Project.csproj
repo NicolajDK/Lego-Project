@@ -685,6 +685,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\master.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />
@@ -2289,6 +2290,8 @@
     <Content Include="Views\MacroPartials\Gallery Macro.cshtml" />
     <Content Include="Views\MacroPartials\News Gallery.cshtml" />
     <Content Include="Views\MacroPartials\News Spot View.cshtml" />
+    <Content Include="Views\MacroPartials\Lego Spot View.cshtml" />
+    <Content Include="Views\Partials\General\Footer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
