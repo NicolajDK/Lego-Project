@@ -1,0 +1,12 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<Lego_Project_Core.Models.Review>
+
+<div class="review-rating">
+    <ul class="" style="list-style: none; ">
+        @for (var x = 1; x <= 10; x++)
+        {
+            <li>
+                <i class="@(x <= Model.Content.Score ? "fas" : "far") fa-star"></i>                    
+            </li> 
+        }
+    </ul>
+</div>

@@ -3,3 +3,29 @@
 @{
 	Layout = "Layout.cshtml";
 }
+
+<div class="review-page">
+    <div class="hero-banner" style="background-image: url('@Model.Content.SliderImages.First().Url')">
+
+    </div>
+    <div class="review-set-details">
+        <h2>@Model.Content.SetName</h2>
+        <p>Code: @Model.Content.LegoCode</p>
+    </div>
+
+
+@Html.Partial("General/ReviewScore", Model.Content)
+    
+    <div class="review-text">
+        @Model.Content.ReviewText
+    </div>
+    <div class="review-related-set jumbotron">
+        <p>
+            Related Set
+        </p>
+        <a href="@Model.Content.RelatedSet.Url">
+            @Model.Content.RelatedSet.Name
+        </a>
+
+    </div>
+</div>

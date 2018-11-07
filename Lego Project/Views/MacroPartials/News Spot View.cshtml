@@ -24,11 +24,16 @@
             <div class="col-1" style="margin-right: 10px;"></div>
             @foreach (var newsArticle in Articles)
             {
-                <div class="news-spot-article col-3">
-                    <img class="thumbnail" src="@newsArticle.ArticleImage.Url"/>
-                    <p>@newsArticle.Headline</p>
-                    <p>@newsArticle.Teaser</p>
-                    <a href="@newsArticle.Url" class="btn btn-info" style="margin-bottom:2px">Read More</a>
+
+                <div class="col-3 review-list-item ">
+                    <div class="card">
+                        <img class="card-img-top" src="@newsArticle.ArticleImage.Url" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">@newsArticle.Headline</h5>
+                            <p class="card-text">@newsArticle.Teaser</p>
+                            <a href="@newsArticle.Url" class="btn btn-primary">Read Article</a>
+                        </div>
+                    </div>
                 </div>
 
             }

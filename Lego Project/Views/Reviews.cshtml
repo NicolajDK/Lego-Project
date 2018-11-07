@@ -1,6 +1,49 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<Lego_Project_Core.Models.Reviews>
+@using Lego_Project_Core.Models
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 @{
-	Layout = "Layout.cshtml";
+    Layout = "Layout.cshtml";
+
+    var reviews = Model.Content.Children<Review>();
 }
 
+<div class="reviews-list-page">
+    <div class="review-list-content">
+        <h1>@Model.Content.Title</h1>
+        <p>@Model.Content.MainContent</p>
+    </div>
+    <div class="divider"></div>
+    <div>
+        <div class="review-list row">
+            @foreach (var review in reviews)
+            {
+                <div class="col-3 review-list-item ">
+                    <div class="card">
+                        <img class="card-img-top" src="@review.SliderImages.First().Url" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">@review.Name</h5>
+                            <p class="card-text">@review.SetName</p>
+                            <a href="@review.Url" class="btn btn-primary">Read Review</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                @*<div class="col-3" style="">
+                    <div class="review-list-item jumbotron">
+                        <div class="review-thumbnail" style="background-image: url('@review.SliderImages.First().Url')">
+
+                        </div>
+                        <div class="review-item-description">
+                            <p>@review.Name</p>
+                            <p>@review.SetName</p>
+                            @Html.Partial("General/ReviewScore", review)
+                            <a class="btn btn-link" href="@review.Url">Read Review</a>
+                        </div>
+                    </div>
+                </div>*@
+            }
+        </div>
+    </div>
+
+</div>

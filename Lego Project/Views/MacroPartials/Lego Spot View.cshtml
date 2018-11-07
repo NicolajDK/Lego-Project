@@ -25,11 +25,15 @@
             <div class="col-1" style="margin-right: 10px;"></div>
             @foreach (var set in Sets)
             {
-                <div class="news-spot-article col-3">
-                    <img class="thumbnail" src="@set.Image.Url"/>
-                    <p>@set.SetTitle</p>
-                    <p>@set.SetCode</p>
-                    <a href="@set.Url" class="btn btn-info" style="margin-bottom:2px">Read More</a>
+                <div class="col-3 review-list-item ">
+                    <div class="card">
+                        <img class="card-img-top" src="@set.Image.Url" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">@set.SetTitle</h5>
+                            <p class="card-text">@set.SetCode</p>
+                            <a href="@set.Url" class="btn btn-primary">View Set</a>
+                        </div>
+                    </div>
                 </div>
 
             }

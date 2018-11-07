@@ -1,6 +1,23 @@
 ﻿body {
 }
 
+.news-list {
+
+}
+
+.news-list ul{
+    list-style: none;
+}
+
+.news-list li {
+    border-bottom: solid black 1px;
+    margin-bottom: 10px;
+}
+
+.news-thumbnail {
+    height: 200px;
+}
+
 .news-spot-list {
     border-bottom: 2px solid black;
     border-top: 2px solid black;
@@ -75,6 +92,45 @@
 .set-gallery .row {
     border: solid black 1px;
     padding: 5px;
+}
+
+.review-rating ul {
+    padding: 0;
+}
+
+.review-rating ul li {
+    display:inline-block
+}
+
+.review-list {
+    border-top: solid black 1px;
+    padding-top: 10px;
+
+}
+
+.review-list-item {
+    padding-left: 8px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.review-thumbnail {
+    height: 150px;
+    width: 100%;
+    background-size: cover;
+          
+}
+
+.hero-banner {
+    width: 100vw;
+    position: relative;
+    left: calc(-1 * (100vw - 100%) / 2);
+
+    height: 400px;
+    background-size: cover;
+    margin-bottom: 10px; 
 }
 
 .set-item-details {

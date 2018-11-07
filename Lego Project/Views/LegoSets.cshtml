@@ -20,14 +20,13 @@
     <div class="lego-set-list row">
         @foreach (var set in sets)
         {
-            <div class="col-3 ">
-                <div class="set-item">
-                    <a href="@set.Url" class="thumbnail">
-                        <img src="@set.Image.Url"/>
-                    </a>
-                    <div class="set-item-details">
-                        <p>@set.SetTitle</p>
-                        <p>@set.SetCode</p>
+            <div class="col-3 review-list-item ">
+                <div class="card">
+                    <img class="card-img-top" src="@set.Image.Url" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">@set.Name</h5>
+                        <p class="card-text">@set.SetCode</p>
+                        <a href="@set.Url" class="btn btn-primary">Read Review</a>
                     </div>
                 </div>
             </div>

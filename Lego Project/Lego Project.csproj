@@ -2292,6 +2292,7 @@
     <Content Include="Views\MacroPartials\News Spot View.cshtml" />
     <Content Include="Views\MacroPartials\Lego Spot View.cshtml" />
     <Content Include="Views\Partials\General\Footer.cshtml" />
+    <Content Include="Views\Partials\General\ReviewScore.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

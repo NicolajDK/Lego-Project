@@ -55,6 +55,15 @@ namespace Lego_Project_Core.Models
 		}
 
 		///<summary>
+		/// Related Set: Select a related set
+		///</summary>
+		[ImplementPropertyType("relatedSet")]
+		public IPublishedContent RelatedSet
+		{
+			get { return this.GetPropertyValue<IPublishedContent>("relatedSet"); }
+		}
+
+		///<summary>
 		/// Review Text: The review article itself
 		///</summary>
 		[ImplementPropertyType("reviewText")]
