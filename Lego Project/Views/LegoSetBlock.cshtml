@@ -1,0 +1,21 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<Lego_Project_Core.Models.LegoSetBlock>
+@using Lego_Project_Core.Models
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = null;
+
+    var set = Model.Content.LegoSet.OfType<LegoSet>();
+}
+
+<div>
+    <div class="review-list-item ">
+        <div class="card">
+            <img class="card-img-top" src="@set.Image.Url" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">@set.Name</h5>
+                <p class="card-text">@set.SetCode</p>
+                <a href="@set.Url" class="btn btn-primary">Read Review</a>
+            </div>
+        </div>
+    </div>
+</div>

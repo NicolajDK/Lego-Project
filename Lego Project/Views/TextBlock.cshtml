@@ -1,0 +1,10 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<Lego_Project_Core.Models.TextBlock>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = null;
+}
+
+<div>
+    <h1>TEXT BLOCK</h1>
+</div>
+@Model.Content.TextEditor
